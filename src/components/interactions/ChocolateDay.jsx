@@ -52,7 +52,7 @@ const ChocolateDay = () => {
         <div className="flex flex-col items-center w-full max-w-lg gap-6">
             <audio src={config.music.chocolate} autoPlay loop hidden />
             <div className="p-4 bg-[#26233a] border-4 border-[#d97706] text-center shadow-[4px_4px_0_rgba(0,0,0,0.5)]">
-                <h2 className="text-[#d97706] text-lg mb-2">{config.person.name.toUpperCase()}'S PATISSERIE</h2>
+                <h2 className="text-[#d97706] text-lg mb-2">SHRAVANI'S PATISSERIE</h2>
                 <p className="text-[10px] text-[#908caa]">Drag sweet ingredients into the bowl!</p>
             </div>
 
