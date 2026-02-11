@@ -15,16 +15,22 @@ export const getDayIndex = (date = new Date()) => {
   return diffDays;
 };
 
-// Check if a specific day (0-7) is unlocked
+// Check if a specific day (0-7) is unlocked based on completing previous levels
 export const isDayUnlocked = (dayIndex) => {
-    // Check for debug override
-    const debugDay = localStorage.getItem('debug_day_override');
-    if (debugDay !== null) {
-        return parseInt(debugDay) >= dayIndex;
-    }
-
-    const todayIndex = getDayIndex(new Date());
-    return todayIndex >= dayIndex;
+    // Day 0 (Rose Day) is always unlocked - starting level
+    if (dayIndex === 0) return true;
+    
+    // For all other days, check if previous day's keepsake has been collected
+    const keepsakes = JSON.parse(localStorage.getItem('Mohtarmann_keepsakes') || '[]');
+    
+    // Map day index to keepsake ID
+    const dayKeys = ['rose', 'propose', 'chocolate', 'teddy', 'promise', 'hug', 'kiss', 'valentine'];
+    
+    // Check if the previous day's keepsake exists
+    const previousDayKey = dayKeys[dayIndex - 1];
+    const hasPreviousKeepsake = keepsakes.some(k => k.id === previousDayKey);
+    
+    return hasPreviousKeepsake;
 };
 
 // Get current day's content key
