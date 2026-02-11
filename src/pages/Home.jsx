@@ -29,7 +29,7 @@ const Home = () => {
     <div className="flex flex-col gap-6 pb-24 w-full">
       <header className="mt-8 text-center space-y-4">
         <h1 className="text-2xl md:text-4xl text-[#eb6f92] animate-pulse drop-shadow-[2px_2px_0_rgba(0,0,0,1)] font-romantic">
-            CHRONICLES OF {config.person.name.toUpperCase()}
+            HIDDEN VAULT FOR SHRAVANI
         </h1>
         <div className="inline-block bg-[#26233a] border-2 border-[#e0def4] px-4 py-2 text-xs md:text-sm text-[#908caa]">
              LEVEL: VALENTINE'S WEEK
