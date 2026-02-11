@@ -38,7 +38,7 @@ const ValentineDay = () => {
                         <div className="text-6xl mb-6 animate-pulse">💝</div>
                         
                         <h1 className="text-2xl md:text-3xl text-[#eb6f92] mb-8 font-serif italic">
-                            My Dearest {config.person.name},
+                            My Sweetheart Shravani,
                         </h1>
                         
                         <div className="space-y-6 text-[#e0def4] text-sm md:text-base leading-loose font-serif italic tracking-wide">
